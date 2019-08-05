@@ -72,7 +72,7 @@ class AppServerOrchestrator {
 		return this._manager;
 	}
 
-	getEnabledGames() {
+	getEnabledComponents() {
 		const apps = this._manager.get().map((prl) => {
 			const info = prl.getInfo();
 			info.status = prl.getStatus();

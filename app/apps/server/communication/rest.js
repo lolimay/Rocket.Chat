@@ -178,13 +178,11 @@ export class AppsRestApi {
 			},
 		});
 
-		this.api.addRoute('games', { authRequired: false }, {
+		this.api.addRoute('components', { authRequired: false }, {
 			get() {
-				const games = orchestrator.getEnabledGames();
+				const components = orchestrator.getEnabledComponents();
 
-				console.log(games);
-
-				return API.v1.success({ games: Array.from(games.values()) });
+				return API.v1.success({ components: Array.from(components.values()) });
 			},
 		});
 
