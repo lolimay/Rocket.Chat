@@ -178,6 +178,14 @@ export class AppsRestApi {
 			},
 		});
 
+		this.api.addRoute('components', { authRequired: false }, {
+			get() {
+				const components = orchestrator.getEnabledComponents();
+
+				return API.v1.success({ components: Array.from(components.values()) });
+			},
+		});
+
 		this.api.addRoute('languages', { authRequired: false }, {
 			get() {
 				const apps = manager.get().map((prl) => ({

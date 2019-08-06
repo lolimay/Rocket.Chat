@@ -13,4 +13,10 @@ import './admin/appManage';
 import './admin/appWhatIsIt.html';
 import './admin/appWhatIsIt';
 
+import './gameCenter/tabBarButton';
+import './gameCenter/gameCenter.html';
+import './gameCenter/gameModal.html';
+import './gameCenter/gameModal';
+import './gameCenter/gameCenter';
+
 export { Apps } from './orchestrator';
