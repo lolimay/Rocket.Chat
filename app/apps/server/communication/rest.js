@@ -268,6 +268,10 @@ export class AppsRestApi {
 			},
 		});
 
+		this.api.addRoute('externalComponentEvent', { authRequired: true }, {
+
+		});
+
 		this.api.addRoute('bundles/:id/apps', { authRequired: true, permissionsRequired: ['manage-apps'] }, {
 			get() {
 				const baseUrl = orchestrator.getMarketplaceUrl();
