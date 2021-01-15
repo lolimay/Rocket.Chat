@@ -28,7 +28,7 @@ describe('Apps - Send Messages As APP User', function() {
 					expect(err).to.have.a.property('error');
 					expect(res).to.be.equal(undefined);
 					expect(err.error).to.have.a.property('text');
-					expect(err.error.text).to.be.equal('Room "invalid-room" could not be found');
+					expect(err.error.text).to.be.equal('Room "invalid-rid" could not be found');
 				})
 				.end(done);
 		});
